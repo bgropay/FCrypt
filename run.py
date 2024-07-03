@@ -11,7 +11,7 @@ while True:
     choice = input("Pilih opsi (1/2/3): ")
     
     if choice == "1":
-        directory = input("Masukkan path direktori: ")
+        directory = input("[»] Masukkan jalur ke folder yang ingin dienkripsi: ")
         
         for filename in os.listdir(directory):
             filepath = os.path.join(directory, filename)
@@ -32,8 +32,8 @@ while True:
             os.remove(filepath)
             
             # Menampilkan pesan status
-            print(f"Mengenkripsi {filename}...")
-            print(f"File {filename} berhasil dienkripsi menjadi {encrypted_filename}")
+            print(f"[*] Mengenkripsi {filename}...")
+            print(f"[+] File {filename} berhasil dienkripsi menjadi {encrypted_filename}")
     
     elif choice == "2":
         directory = input("Masukkan path direktori: ")
